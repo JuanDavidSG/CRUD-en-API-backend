@@ -66,10 +66,10 @@ public class Controller {
                 estudiante.setNombre(estudianteActualizado.getNombre());
                 estudiante.setSemestre(estudianteActualizado.getSemestre());
                 estudiante.setFacultad(estudianteActualizado.getFacultad());
-                return "El estudiante se ha editado";
+                return "El estudiante se ha editado :) ";
             }
         }
-        return "No se encontró ningún estudiante con el ID proporcionado, intente nuevamente";
+        return "No se encontró ningún estudiante con el ID proporcionado, intente nuevamente ";
     }
 
 
