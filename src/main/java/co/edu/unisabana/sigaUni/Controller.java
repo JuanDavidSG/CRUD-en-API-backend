@@ -19,6 +19,23 @@ public class Controller {
         estudianteList.add(new Estudiante(9876, "Fulanita", 7, "Medicina"));
     }
 
+    @GetMapping(path = "/estudiantes")
+    public List<Estudiante> obtenerEstudiantesPorFacultad(@RequestParam String facultad, @RequestParam(required = false) Integer cantidad) {
+        List<Estudiante> busqueda = new ArrayList<>();
+        int contador = 0;
+        for (Estudiante estudiante : estudianteList) {
+            if (estudiante.getFacultad().equals(facultad)) {
+                busqueda.add(estudiante);
+                contador++;
+                if (cantidad != null && contador >= cantidad) {
+                    break;
+                }
+            }
+        }
+        return busqueda;
+    }
+
+
     @GetMapping(path = "/estudiantes/todos")
     public List<Estudiante> obtenerEstudiantes() {
         return estudianteList;
