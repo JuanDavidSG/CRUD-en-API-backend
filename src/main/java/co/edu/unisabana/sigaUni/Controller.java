@@ -49,5 +49,17 @@ public class Controller {
         return "Estudiante ingresado correctamente";
     }
 
+    @DeleteMapping(path = "/estudiante/eliminar/{id}")
+    public String eliminarEstudiante(@PathVariable int id) {
+        boolean eliminado = estudianteList.removeIf(estudiante -> estudiante.getId() == id);
+        if (eliminado) {
+            return "El estudiante se ha eliminado";
+        } else {
+            return "No se encontró ningún estudiante con el ID proporcionado, intente nuevamente";
+        }
+    }
+
+
+
 
 }
