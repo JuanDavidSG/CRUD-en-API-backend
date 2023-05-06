@@ -15,10 +15,8 @@ public class Estudiante {
         this.semestre = semestre;
         this.facultad = facultad;
     }
-
     public Estudiante() {
     }
-
     public int getId() {
         return id;
     }
