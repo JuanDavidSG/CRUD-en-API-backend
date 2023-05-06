@@ -59,6 +59,19 @@ public class Controller {
         }
     }
 
+    @PutMapping(path = "estudiante/editar/{id}")
+    public String editarEstudiante(@PathVariable int id, @RequestBody Estudiante estudianteActualizado) {
+        for (Estudiante estudiante : estudianteList) {
+            if (estudiante.getId() == id) {
+                estudiante.setNombre(estudianteActualizado.getNombre());
+                estudiante.setSemestre(estudianteActualizado.getSemestre());
+                estudiante.setFacultad(estudianteActualizado.getFacultad());
+                return "El estudiante se ha editado";
+            }
+        }
+        return "No se encontró ningún estudiante con el ID proporcionado, intente nuevamente";
+    }
+
 
 
 
