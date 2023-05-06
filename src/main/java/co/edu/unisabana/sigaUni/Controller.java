@@ -20,7 +20,7 @@ public class Controller {
     }
 
     @GetMapping(path = "/estudiantes")
-    public List<Estudiante> obtenerEstudiantesPorFacultad(@RequestParam String facultad, @RequestParam(required = false) Integer cantidad) {
+    public List<Estudiante> obtenerEstudiantesPorFacultad (@RequestParam String facultad, @RequestParam(required = false) Integer cantidad) {
         List<Estudiante> busqueda = new ArrayList<>();
         int contador = 0;
         for (Estudiante estudiante : estudianteList) {
