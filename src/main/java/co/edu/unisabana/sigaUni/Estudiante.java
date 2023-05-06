@@ -9,14 +9,16 @@ public class Estudiante {
     private int semestre;
     private String facultad;
 
-    public Estudiante( int id,String nombre, int semestre, String facultad) {
+    public Estudiante(int id, String nombre, int semestre, String facultad) {
         this.id = id;
         this.nombre = nombre;
         this.semestre = semestre;
         this.facultad = facultad;
     }
+
     public Estudiante() {
     }
+
     public int getId() {
         return id;
     }
