@@ -10,7 +10,7 @@ public class Estudiante {
     private String facultad;
     private String programa;
 
-    public Estudiante(int id, String nombre, int semestre, String facultad,String programa) {
+    public Estudiante(int id, String nombre, int semestre, String facultad, String programa) {
         this.id = id;
         this.nombre = nombre;
         this.semestre = semestre;
