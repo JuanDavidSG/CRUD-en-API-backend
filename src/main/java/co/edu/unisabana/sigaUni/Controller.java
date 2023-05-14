@@ -54,7 +54,7 @@ public class Controller {
 
     @PutMapping(path = "estudiante/editar/{id}")
     public Respuesta editarEstudiante(@PathVariable int id, @RequestBody Estudiante estudianteActualizado) {
-        for (Estudiante estudiante : estudianteList) {
+        for (Estudiante estudiante : estudianteList)  {
             if (estudiante.getId() == id) {
                 estudiante.setNombre(estudianteActualizado.getNombre());
                 estudiante.setSemestre(estudianteActualizado.getSemestre());
